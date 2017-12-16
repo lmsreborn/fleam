@@ -1,7 +1,7 @@
 package fleam.runtime.execution;
 
 /**
- * *     CREATED  -> SCHEDULED -> DEPLOYING -> RUNNING -> FINISHED
+ * CREATED  -> SCHEDULED -> DEPLOYING -> RUNNING -> FINISHED
  * |            |            |          |
  * |            |            |   +------+
  * |            |            V   V
