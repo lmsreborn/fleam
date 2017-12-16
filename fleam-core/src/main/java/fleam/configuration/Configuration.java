@@ -1,6 +1,8 @@
 package fleam.configuration;
 
 import fleam.core.io.IOReadableWritable;
+import fleam.core.memory.DataInputView;
+import fleam.core.memory.DataOutputView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,12 +32,23 @@ public class Configuration implements IOReadableWritable, java.io.Serializable, 
 
 
     @Override
-    public void write() throws IOException{
+    public void write(final DataOutputView out) throws IOException{
+        synchronized (this.configData){
+            out.writeInt(this.configData.size());
+
+            for (Map.Entry<String, Object> entry : this.configData.entrySet()) {
+                String key = entry.getKey();
+                Object val = entry.getValue();
+
+
+
+            }
+        }
 
     }
 
     @Override
-    public void read() throws IOException{
+    public void read(final DataInputView in) throws IOException{
 
     }
 
@@ -45,7 +58,7 @@ public class Configuration implements IOReadableWritable, java.io.Serializable, 
     @Override
     public int hashCode() {
         int hash = 0;
-        for (String s : this.confData.keySet()) {
+        for (String s : this.configData.keySet()) {
             hash ^= s.hashCode();
         }
         return hash;
@@ -58,9 +71,9 @@ public class Configuration implements IOReadableWritable, java.io.Serializable, 
             return true;
         }
         else if (obj instanceof Configuration) {
-            Map<String, Object> otherConf = ((Configuration) obj).confData;
+            Map<String, Object> otherConf = ((Configuration) obj).configData;
 
-            for (Map.Entry<String, Object> e : this.confData.entrySet()) {
+            for (Map.Entry<String, Object> e : this.configData.entrySet()) {
                 Object thisVal = e.getValue();
                 Object otherVal = otherConf.get(e.getKey());
 
@@ -86,7 +99,7 @@ public class Configuration implements IOReadableWritable, java.io.Serializable, 
 
     @Override
     public String toString() {
-        return this.confData.toString();
+        return this.configData.toString();
     }
 
 }
