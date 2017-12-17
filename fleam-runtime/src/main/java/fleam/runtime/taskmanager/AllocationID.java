@@ -23,4 +23,3 @@ public class AllocationID extends AbstractID{
     }
 }
 
-}
