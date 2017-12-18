@@ -1,8 +1,8 @@
 package fleam.runtime.memory;
 
+import fleam.core.memory.MemorySegment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.jvm.hotspot.utilities.memo.MemoizedObject;
 
 public class MemoryManager {
 
