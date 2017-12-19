@@ -80,7 +80,7 @@ public class HybridMemorySegment extends MemorySegment {
     //  MemorySegment operations
     // -------------------------------------------------------------------------
 
-    public byte[] getArray() {
+    public byte[] getHeapBuffer() {
         if (heapMemory != null) {
             return heapMemory;
         } else {
