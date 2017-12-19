@@ -198,7 +198,7 @@ public class MemoryManager {
 
     static final class HybridOffHeapMemoryPool extends MemoryPool {
 
-        /** The collection of available memory segments. */
+        /** The collection of availagble memory segments. */
         private final ArrayDeque<ByteBuffer> availableMemory;
 
         private final int segmentSize;
