@@ -35,7 +35,7 @@ public class Buffer {
         this.bufferRecycler = bufferRecycler;
         this.isBuffer = true;
     }
-    public int getSize() {
+    public int getSizeUnsafe() {
         return size;
     }
 

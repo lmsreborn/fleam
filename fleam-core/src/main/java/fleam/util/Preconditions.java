@@ -17,4 +17,10 @@ public final class Preconditions {
         }
         return reference;
     }
+
+    public static void checkState(boolean condition, @Nullable Object errorMessage) {
+        if (!condition) {
+            throw new IllegalStateException(String.valueOf(errorMessage));
+        }
+    }
 }

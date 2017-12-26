@@ -68,9 +68,6 @@ public class LocalBufferPool implements BufferPool {
 
 
     private Buffer requestBuffer(boolean isBlocking){
-        synchronized (availableMemorySegments){
-
-        }
 
     }
 }

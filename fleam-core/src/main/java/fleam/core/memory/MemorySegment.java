@@ -49,6 +49,9 @@ public abstract class MemorySegment {
         this.owner = owner;
     }
 
+    public int size(){
+        return size;
+    }
     public void free(){
         address = addressLimit + 1;
     }
