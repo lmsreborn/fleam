@@ -1,4 +1,12 @@
 package fleam.runtime.taskmanager.output;
 
-public interface ResultPartitionView {
+import fleam.runtime.network.buffer.Buffer;
+
+import java.io.IOException;
+
+public interface ResultSubpartitionView {
+
+    Buffer getNextBuffer() throws IOException;
+
+    boolean isReleased();
 }

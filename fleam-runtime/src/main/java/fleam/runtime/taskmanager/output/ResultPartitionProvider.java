@@ -1,4 +1,4 @@
-package fleam.runtime.network.ResultPartition;
+package fleam.runtime.taskmanager.output;
 
 public interface ResultPartitionProvider {
 
