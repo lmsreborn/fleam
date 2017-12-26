@@ -1,4 +1,4 @@
-package fleam.runtime.network;
+package fleam.runtime.network.buffer;
 
 import java.nio.Buffer;
 

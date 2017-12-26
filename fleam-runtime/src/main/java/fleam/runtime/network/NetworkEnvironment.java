@@ -1,5 +1,7 @@
 package fleam.runtime.network;
 
+import fleam.runtime.network.netty.NettyConnectionManager;
+import fleam.runtime.network.netty.PartitionRequestProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,12 +12,17 @@ public class NetworkEnvironment {
 
     private final NetworkBufferPool networkBufferPool;
 
-    private final ConnectionManager connectionManager;
+    private final NettyConnectionManager connectionManager;
 
     private final ResultPartitionManager resultPartitionManager;
 
 
 
+    public void start(){
+        PartitionRequestProtocol partitionRequestProtocol = new PartitionRequestProtocol();
+
+
+    }
 }
 
 
