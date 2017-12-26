@@ -1,4 +1,12 @@
 package fleam.runtime.taskmanager.input;
 
-public class InputGate {
+import java.io.IOException;
+
+public interface InputGate {
+
+    BufferOrEvent getNextBufferOrEvent() throws IOException, InterruptedException
+
+    void requestPartitions() throws IOException;
+
+    void notifyChannelNonEmpty(InputChannel channel);
 }
